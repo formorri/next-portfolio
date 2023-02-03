@@ -1,0 +1,88 @@
+@use '../../styles/settings/index.scss' as *;
+
+
+.container {
+    @include padding-x;
+    width: 100vw;
+    position: fixed;
+    top: 1rem;
+    z-index: 100;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.link {
+    @include text-thin;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    a {
+        color: $text-2;
+        transition: $transition-buttons;
+        background-color: $theme-background;
+        padding: 5px 15px;
+        border-radius: $border-radius;
+        text-decoration: none;
+    }
+    
+    &::before {
+        transition: $transition-buttons;
+        $size: 10px;
+        content: '';
+        background-color: transparent;
+        display: block;
+        width: $size;
+        height: calc($size * 0.9);
+        margin-bottom: 10px;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    &:hover {
+        text-decoration: none;
+        &::before {
+            background-color: $theme-2;
+        }
+        
+        a {
+            color: $text-main;
+            background-color: $theme-4;
+        }
+    }
+}
+
+.active {
+    @include text-thin;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    a {
+        color: $text-main;
+        background-color: $theme-4;
+        padding: 5px 15px;
+        border-radius: $border-radius;
+        text-decoration: none;
+    }
+
+    &::before {
+        $size: 10px;
+        content: '';
+        background-color: $theme-2;
+        display: block;
+        width: $size;
+        height: calc($size * 0.9);
+        margin-bottom: 10px;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+}

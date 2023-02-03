@@ -1,0 +1,134 @@
+@use 'media-query' as *;
+
+$font-size-multiplier: 0.2; //% increase or reduction depending on screen size
+$line-height-multiplier: 1.2;
+$small-font: 1 - $font-size-multiplier;
+$normal-font: 1;
+$large-font: 1 + $font-size-multiplier;
+
+$url:'../../public/fonts/' ;
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url($url + 'HelveticaNeue-Medium.eot');
+    src: url($url + 'HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url($url + 'HelveticaNeue-Medium.woff2') format('woff2'),
+        url($url + 'HelveticaNeue-Medium.woff') format('woff'),
+        url($url + 'HelveticaNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url($url + 'HelveticaNeueRegular.eot');
+    src: url($url + 'HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url($url + 'HelveticaNeueRegular.woff2') format('woff2'),
+        url($url + 'HelveticaNeueRegular.woff') format('woff'),
+        url($url + 'HelveticaNeueRegular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url($url + 'HelveticaNeue-Bold.eot');
+    src: url($url + 'HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url($url + 'HelveticaNeue-Bold.woff2') format('woff2'),
+        url($url + 'HelveticaNeue-Bold.woff') format('woff'),
+        url($url + 'HelveticaNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Basement Grotesque Roman';
+    src: url($url + 'BasementGrotesque-Black.eot');
+    src: url($url + 'BasementGrotesque-Black.eot?#iefix') format('embedded-opentype'),
+        url($url + 'BasementGrotesque-Black.woff2') format('woff2'),
+        url($url + 'BasementGrotesque-Black.woff') format('woff'),
+        url($url + 'BasementGrotesque-Black.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin font-settings($desktop-font-size) {
+    font-size: calc($desktop-font-size * $small-font);
+    line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
+    margin: 0;
+
+    @include gt-xs {
+        font-size: $desktop-font-size;
+        line-height: calc($desktop-font-size * $line-height-multiplier);
+    }
+
+    @include gt-lg {
+        font-size: calc($desktop-font-size * $large-font);
+        line-height: calc(($desktop-font-size * $large-font) * $line-height-multiplier);
+    }
+}
+
+
+@mixin text-header {
+    @include font-settings ($desktop-font-size: 50px);
+    font-family: 'Basement Grotesque Roman';
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin text-title {
+    @include font-settings ($desktop-font-size: 35px);
+    font-family: 'Basement Grotesque Roman';
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin text-navbar-logo {
+    @include font-settings ($desktop-font-size: 18px);
+    font-family: 'Basement Grotesque Roman';
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin text-bold-1 {
+    @include font-settings ($desktop-font-size: 16px);
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin text-medium-1 {
+    @include font-settings ($desktop-font-size: 20px);
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin text-normal-1 {
+    @include font-settings ($desktop-font-size: 18px);
+    font-family: 'Helvetica Neue';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin text-normal-2 {
+    @include font-settings ($desktop-font-size: 16px);
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin text-light-2 {
+    @include font-settings ($desktop-font-size: 16px);
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+

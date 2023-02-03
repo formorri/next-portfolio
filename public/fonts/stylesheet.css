@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue-Medium.eot');
+    src: url('HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeue-Medium.woff2') format('woff2'),
+        url('HelveticaNeue-Medium.woff') format('woff'),
+        url('HelveticaNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('HelveticaNeueRegular.eot');
+    src: url('HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueRegular.woff2') format('woff2'),
+        url('HelveticaNeueRegular.woff') format('woff'),
+        url('HelveticaNeueRegular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue-Bold.eot');
+    src: url('HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeue-Bold.woff2') format('woff2'),
+        url('HelveticaNeue-Bold.woff') format('woff'),
+        url('HelveticaNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Basement Grotesque Roman';
+    src: url('BasementGrotesque-Black.eot');
+    src: url('BasementGrotesque-Black.eot?#iefix') format('embedded-opentype'),
+        url('BasementGrotesque-Black.woff2') format('woff2'),
+        url('BasementGrotesque-Black.woff') format('woff'),
+        url('BasementGrotesque-Black.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,24 @@
+@use 'settings/index.scss' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Basement Grotesque Roman', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+  background-color: $color-background;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

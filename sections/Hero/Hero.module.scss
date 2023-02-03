@@ -1,0 +1,24 @@
+@use '../../styles/settings/index.scss' as *;
+
+.container {
+    position: relative;
+    padding: $padding-x;
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    background-image:
+        linear-gradient(to right, grey 1px, transparent 1px),
+        linear-gradient(to bottom, grey 1px, transparent 1px);
+
+    .column-2 {
+        z-index: 1;
+        top: 0rem;
+
+        &__text {
+            @include text-header;
+            text-transform: uppercase;
+            color: $color-dark;
+
+        }
+    }
+
+}
