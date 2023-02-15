@@ -2,87 +2,89 @@
 
 
 .container {
-    @include padding-x;
     width: 100vw;
     position: fixed;
+    padding: 0.5rem $padding-phone;
     top: 1rem;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    ul {
+    .icon {
+        width: 6rem;
+        height: auto;
+    }
+
+    .link {
+        display: none;
+        // @include text-regular-1;
+        // display: flex;
+        // column-gap: 5rem;
+
+        // li{
+        //     list-style: none;
+        //     a{
+        //         color: $color-dark-1;
+        //         text-decoration: none;
+        //     }
+        //     &:hover{
+        //         a{
+        //             color: $color-accent-2;
+        //         }
+        //     }
+        // }
+    }
+
+    .externals {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-    }
-}
+        column-gap: 1rem;
+        align-self: end;
 
-.link {
-    @include text-thin;
-    text-transform: capitalize;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    a {
-        color: $text-2;
-        transition: $transition-buttons;
-        background-color: $theme-background;
-        padding: 5px 15px;
-        border-radius: $border-radius;
-        text-decoration: none;
-    }
-    
-    &::before {
-        transition: $transition-buttons;
-        $size: 10px;
-        content: '';
-        background-color: transparent;
-        display: block;
-        width: $size;
-        height: calc($size * 0.9);
-        margin-bottom: 10px;
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    }
+        .button-container {
+            align-self: end;
+            // margin-bottom: 0.5rem;
+            row-gap: 1rem;
 
-    &:hover {
-        text-decoration: none;
-        &::before {
-            background-color: $theme-2;
-        }
-        
-        a {
-            color: $text-main;
-            background-color: $theme-4;
+            .socials {
+                @include button($color-background, $color-dark-1);
+            }
+
+            .contact {
+                @include button($color-accent-2, $color-background);
+            }
         }
     }
 }
 
-.active {
-    @include text-thin;
-    text-transform: capitalize;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    a {
-        color: $text-main;
-        background-color: $theme-4;
-        padding: 5px 15px;
-        border-radius: $border-radius;
-        text-decoration: none;
-    }
+@include gt-md {
+    .container {
+        padding: 0.5rem $padding-desktop;
 
-    &::before {
-        $size: 10px;
-        content: '';
-        background-color: $theme-2;
-        display: block;
-        width: $size;
-        height: calc($size * 0.9);
-        margin-bottom: 10px;
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        .icon {
+            width: 8rem;
+            height: auto;
+        }
+
+        .link {
+            @include text-regular-1;
+            display: flex;
+            column-gap: 3rem;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $color-dark-1;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    a {
+                        color: $color-accent-2;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,9 @@
+@use 'settings/index.scss' as *;
+.constant{
+    @include text-header;
+    position: fixed;
+    color: $color-accent-1;
+    mix-blend-mode: difference;
+    top: $main-top-desktop;
+    right: $padding-desktop;
+}

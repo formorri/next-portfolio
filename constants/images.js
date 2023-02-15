@@ -1,21 +1,29 @@
+import logo from '../public/images/logo.png';
+import arrow from '../public/images/arrow.png';
+import design1 from '../public/images/design-1.png';
+import design2 from '../public/images/design-2.png';
+import design3 from '../public/images/design-3.png';
+import design4 from '../public/images/design-4.png';
+import divider from '../public/images/divider.png';
+import hero1 from '../public/images/hero-1.png';
+import hero2 from '../public/images/hero-2.png';
+import showcaseWebsite1 from '../public/images/showcase-website-1.png';
+import showcaseWebsite2 from '../public/images/showcase-website-2.png';
+import showcaseWebsite3 from '../public/images/showcase-website-3.png';
 
-import arrow1 from '../public/images/arrow-icon.png';
-import arrow2 from '../public/images/go-to-website-arrow.png';
-import background from '../public/images/showcase-background.png';
-import showcaseKPJ from '../public/images/showcase-kpj.png';
-import showcaseSmart from '../public/images/showcase-smart-axiata.png';
-import stepper from '../public/images/stepper-length.png';
-import hero from '../public/images/hero-image.png';
-// import n from '../public/images/showcase-mockup.png';
-
-const Images= {
-    arrow1,
-    arrow2,
-    background,
-    showcaseKPJ,
-    showcaseSmart,
-    stepper,
-    hero,
+const Images = {
+    logo,
+    arrow,
+    design1,
+    design2,
+    design3,
+    design4,
+    divider,
+    hero1,
+    hero2,
+    showcaseWebsite1,
+    showcaseWebsite2,
+    showcaseWebsite3,
 }
 
 export default Images;

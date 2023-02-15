@@ -1,0 +1,13 @@
+@use '../../styles/settings/index.scss' as *;
+
+.section{
+    margin: 3rem $padding-phone;
+    z-index: 1;
+}
+
+@include gt-sm{
+    .section{
+        margin: 5rem $padding-desktop;
+        z-index: 1;
+    }
+}

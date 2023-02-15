@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import React, { useRef, useState, useEffect } from 'react'
 import { images } from '../constants'
-import { Container } from '../components'
+import { Container, Navbar, Section } from '../components'
 import { Hero } from '../sections'
 
 export default function Home() {
@@ -15,7 +15,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-      <Hero />
+        <Navbar />
+        <div className={styles.constant}>
+          Hi, I'm Lam Zi Xin
+        </div>
+        <Section>
+          <Hero />
+        </Section>
 
       </Container>
     </div>
