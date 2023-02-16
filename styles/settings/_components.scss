@@ -1,10 +1,12 @@
 $padding-desktop: 230px;
 $padding-phone: 10px;
 
-$main-top-desktop: 8rem;
+$main-top-desktop: 7.5rem;
 
 $button-border-radius: 5px;
 $border-radius: 20px;
+
+$border: 0.5px solid;
 
 @mixin button ($button-color, $text-color) {
     @include text-bold;
@@ -51,4 +53,9 @@ $border-radius: 20px;
         padding: 0 6px 4px;
     }
 
+}
+
+@mixin glassmorphism {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(20px);
 }

@@ -52,7 +52,7 @@ $url:'../../public/fonts/' ;
 
 
 @mixin text-header {
-    @include font-settings ($desktop-font-size: 60px);
+    @include font-settings ($desktop-font-size: 65px);
     font-family: 'Menlo';
     font-weight: bold;
     font-style: normal;

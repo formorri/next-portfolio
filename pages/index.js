@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss'
 import React, { useRef, useState, useEffect } from 'react'
 import { images } from '../constants'
 import { Container, Navbar, Section } from '../components'
-import { Hero } from '../sections'
+import { Hero, Showcase } from '../sections'
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
       </Head>
       <Container>
         <Navbar />
-        <div className={styles.constant}>
-          Hi, I'm Lam Zi Xin
-        </div>
-        <Section>
+        <Section id='about'>
           <Hero />
+        </Section>
+        <Section>
+          <Showcase />
         </Section>
 
       </Container>

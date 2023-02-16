@@ -6,10 +6,11 @@
     position: fixed;
     padding: 0.5rem $padding-phone;
     top: 1rem;
-    z-index: 100;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
     .icon {
         width: 6rem;
