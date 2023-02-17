@@ -1,4 +1,5 @@
 $padding-desktop: 230px;
+$padding-tablet: 100px;
 $padding-phone: 10px;
 
 $main-top-desktop: 7.5rem;
@@ -45,11 +46,13 @@ $border: 0.5px solid;
             position: relative;
             top: 5.5px;
         }
+
         &:hover {
             bottom: 2px;
         }
     }
-    @include lt-md{
+
+    @include lt-md {
         padding: 0 6px 4px;
     }
 
@@ -58,4 +61,33 @@ $border: 0.5px solid;
 @mixin glassmorphism {
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(20px);
+}
+
+@mixin shadow {
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.26);
+}
+
+@mixin decorative-circles {
+    display: flex;
+    $size: 15px;
+    column-gap: calc($size / 2);
+    margin: 0.5rem 0;
+
+    &__circle {
+        width: $size;
+        height: $size;
+        border-radius: 100%;
+    }
+
+    .red {
+        background-color: $color-decorative-red;
+    }
+
+    .yellow {
+        background-color: $color-decorative-yellow;
+    }
+
+    .green {
+        background-color: $color-decorative-green;
+    }
 }

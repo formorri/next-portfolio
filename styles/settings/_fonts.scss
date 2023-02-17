@@ -33,16 +33,16 @@ $url:'../../public/fonts/' ;
 }
 
 @mixin font-settings($desktop-font-size) {
-    // font-size: calc($desktop-font-size * $small-font);
-    // line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
-    font-size: $desktop-font-size;
-    line-height: calc($desktop-font-size * $line-height-multiplier);
+    font-size: calc($desktop-font-size * $small-font);
+    line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
+    // font-size: $desktop-font-size;
+    // line-height: calc($desktop-font-size * $line-height-multiplier);
     margin: 0;
 
-    // @include gt-xs {
-    //     font-size: $desktop-font-size;
-    //     line-height: calc($desktop-font-size * $line-height-multiplier);
-    // }
+    @include gt-xs {
+        font-size: $desktop-font-size;
+        line-height: calc($desktop-font-size * $line-height-multiplier);
+    }
 
     @include gt-lg {
         font-size: calc($desktop-font-size * $large-font);

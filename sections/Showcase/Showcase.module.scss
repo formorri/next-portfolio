@@ -1,15 +1,28 @@
 @use '../../styles/settings/index.scss' as *;
 
+$spacing: 2rem;
+
+.container {
+    margin: $spacing 0;
+}
+
+.year {
+    @include text-highlight;
+    color: $color-accent-1;
+    margin-bottom: $spacing;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: 40% auto;
-    column-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 1rem;
 
     .info {
         // grid-row-start / grid-column-start / grid-row-end / grid-column-end
-        grid-column: 1 / 2;
-        border: $border $color-dark-1;
-        border-radius: $border-radius;
+        // grid-column: 1 / 2;
+        grid-area: 1 / 1 / 2 / 2;
+
         &__header {
             @include text-highlight;
             color: $color-background;
@@ -19,28 +32,37 @@
         }
 
         &__info {
+            @include glassmorphism;
+            border: $border $color-dark-1;
+            border-radius: 0 0 $border-radius $border-radius;
             display: flex;
+            flex-direction: column;
+
             .project-name {
                 @include text-highlight;
                 color: $color-dark-1;
-                writing-mode: vertical-rl;
-                text-orientation: sideways-right;
-                transform: rotate(180deg);
-                padding: 1rem 0.5rem;
+                // writing-mode: vertical-rl;
+                // text-orientation: sideways-right;
+                // transform: rotate(180deg);
+                padding: 1rem 1rem;
             }
-            .description{
-                @include glassmorphism;
+
+            .description {
                 @include text-regular-1;
                 padding: 1rem;
                 color: $color-dark-1;
-                .tech{
+
+                .tech {
                     @include text-bold;
                     list-style: none;
                     padding: 1rem 0;
                     color: $color-accent-2;
                 }
-                .button-container{
-                    .website-button{
+
+                .button-container {
+                    margin-top: 1rem;
+
+                    .website-button {
                         @include button($color-accent-2, white)
                     }
                 }
@@ -51,7 +73,219 @@
 
     }
 
-    .preview{
-        grid-column: 2 / 3;
+    .preview {
+        // grid-column: 2 / 3;
+        grid-area: 2 / 1 / 3 / 2;
+
+        &__container {
+            @include shadow;
+            border-radius: $border-radius;
+
+            .decorative {
+                @include decorative-circles;
+                background-color: $color-dark-2;
+                margin: 0;
+                padding: 1rem;
+                border-radius: $border-radius $border-radius 0 0;
+            }
+
+            .showcase-website {
+                @include shadow;
+                border-radius: 0 0 $border-radius $border-radius;
+
+            }
+        }
+    }
+}
+
+// @include gt-xs {
+//     $spacing: 2rem;
+
+//     .container {
+//         margin: $spacing 0;
+//     }
+
+//     .year {
+//         @include text-highlight;
+//         color: $color-accent-1;
+//         margin-bottom: $spacing;
+//     }
+
+//     .grid {
+//         display: grid;
+//         grid-template-columns: 40% auto;
+//         column-gap: 1rem;
+
+//         .info {
+//             // grid-row-start / grid-column-start / grid-row-end / grid-column-end
+//             grid-column: 1 / 2;
+
+//             &__header {
+//                 @include text-highlight;
+//                 color: $color-background;
+//                 background-color: $color-accent-2;
+//                 padding: 0.5rem 1rem;
+//                 border-radius: $border-radius $border-radius 0 0;
+//             }
+
+//             &__info {
+//                 @include glassmorphism;
+//                 border: $border $color-dark-1;
+//                 border-radius: 0 0 $border-radius $border-radius;
+//                 display: flex;
+
+//                 .project-name {
+//                     @include text-highlight;
+//                     color: $color-dark-1;
+//                     writing-mode: vertical-rl;
+//                     text-orientation: sideways-right;
+//                     transform: rotate(180deg);
+//                     padding: 1rem 0.5rem;
+//                 }
+
+//                 .description {
+//                     @include text-regular-1;
+//                     padding: 1rem;
+//                     color: $color-dark-1;
+
+//                     .tech {
+//                         @include text-bold;
+//                         list-style: none;
+//                         padding: 1rem 0;
+//                         color: $color-accent-2;
+//                     }
+
+//                     .button-container {
+//                         margin-top: 1rem;
+
+//                         .website-button {
+//                             @include button($color-accent-2, white)
+//                         }
+//                     }
+
+//                 }
+
+//             }
+
+//         }
+
+//         .preview {
+//             grid-column: 2 / 3;
+
+//             &__container {
+//                 @include shadow;
+//                 border-radius: $border-radius;
+
+//                 .decorative {
+//                     @include decorative-circles;
+//                     background-color: $color-dark-2;
+//                     margin: 0;
+//                     padding: 1rem;
+//                     border-radius: $border-radius $border-radius 0 0;
+//                 }
+
+//                 .showcase-website {
+//                     @include shadow;
+//                     border-radius: 0 0 $border-radius $border-radius;
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@include gt-md {
+    $spacing: 2rem;
+
+    .container {
+        margin: $spacing 0;
+    }
+
+    .year {
+        @include text-highlight;
+        color: $color-accent-1;
+        margin-bottom: $spacing;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 40% auto;
+        column-gap: 1rem;
+
+        .info {
+            // grid-row-start / grid-column-start / grid-row-end / grid-column-end
+            grid-column: 1 / 2;
+
+            &__header {
+                @include text-highlight;
+                color: $color-background;
+                background-color: $color-accent-2;
+                padding: 0.5rem 1rem;
+                border-radius: $border-radius $border-radius 0 0;
+            }
+
+            &__info {
+                @include glassmorphism;
+                border: $border $color-dark-1;
+                border-radius: 0 0 $border-radius $border-radius;
+                display: flex;
+
+                .project-name {
+                    @include text-highlight;
+                    color: $color-dark-1;
+                    writing-mode: vertical-rl;
+                    text-orientation: sideways-right;
+                    transform: rotate(180deg);
+                    padding: 1rem 0.5rem;
+                }
+
+                .description {
+                    @include text-regular-1;
+                    padding: 1rem;
+                    color: $color-dark-1;
+
+                    .tech {
+                        @include text-bold;
+                        list-style: none;
+                        padding: 1rem 0;
+                        color: $color-accent-2;
+                    }
+
+                    .button-container {
+                        margin-top: 1rem;
+
+                        .website-button {
+                            @include button($color-accent-2, white)
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        .preview {
+            grid-column: 2 / 3;
+
+            &__container {
+                @include shadow;
+                border-radius: $border-radius;
+
+                .decorative {
+                    @include decorative-circles;
+                    background-color: $color-dark-2;
+                    margin: 0;
+                    padding: 1rem;
+                    border-radius: $border-radius $border-radius 0 0;
+                }
+
+                .showcase-website {
+                    @include shadow;
+                    border-radius: 0 0 $border-radius $border-radius;
+
+                }
+            }
+        }
     }
 }

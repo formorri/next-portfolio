@@ -5,9 +5,15 @@
     z-index: 1;
 }
 
-@include gt-sm{
+
+@include gt-xs{
     .section{
-        margin: 5rem $padding-desktop;
-        z-index: 1;
+        margin: 3rem $padding-tablet;
+    }
+}
+
+@include gt-md{
+    .section{
+        margin: 3rem $padding-desktop;
     }
 }

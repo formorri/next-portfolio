@@ -1,1 +1,69 @@
 @use 'settings/index.scss' as *;
+
+.constant {
+    @include text-header;
+    position: fixed;
+    color: $color-accent-2;
+    top: calc($main-top-desktop - 2rem);
+    right: 1rem;
+    z-index: 1;
+    text-align: right;
+}
+
+@include gt-xs{
+    .constant {
+        top: calc($main-top-desktop - 2rem);
+        right: calc($padding-tablet);
+    }
+}
+
+@include gt-md{
+    .constant {
+        top: calc($main-top-desktop - 2rem);
+        right: calc($padding-desktop);
+    }
+}
+
+.back-to-top {
+    display: flex;
+    @include text-header;
+    color: $color-accent-2;
+    justify-content: flex-start;
+    width: 100%;
+    text-decoration: none;
+    
+    .scroll {
+        background-color: $color-accent-2;
+        padding: 1rem 2.5rem;
+        border-radius: $border-radius;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        transform: scaleY(-1);
+        margin: 0 1rem;
+    }
+    &:hover{
+        color: $color-accent-2;
+        text-decoration: none;
+    }
+}
+
+.footer {
+    @include text-regular-2;
+    display: flex;
+    width: 100%;
+    color: white;
+    background-color: $color-dark-2;
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    border-radius: $border-radius;
+
+    .decorative {
+        @include decorative-circles;
+
+    }
+}

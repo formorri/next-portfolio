@@ -10,28 +10,7 @@
     height: 100%;
 
     .decorative {
-        display: flex;
-        $size: 15px;
-        column-gap: calc($size / 2);
-        margin: 0.5rem 0;
-
-        &__circle {
-            width: $size;
-            height: $size;
-            border-radius: 100%;
-        }
-
-        .red {
-            background-color: $color-decorative-red;
-        }
-
-        .yellow {
-            background-color: $color-decorative-yellow;
-        }
-
-        .green {
-            background-color: $color-decorative-green;
-        }
+        @include decorative-circles;
     }
 
     ul {
