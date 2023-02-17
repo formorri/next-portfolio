@@ -91,7 +91,7 @@ const Carousel = ({ children }) => {
         </div>
       </div>
       <AnimatePresence>
-        <div>
+        <div className={styles.container}>
           <motion.div 
             key={currentIndex}
             variants={variants}

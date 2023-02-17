@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <main className={styles.container}>
       <div className={styles.scroll}>
-        <Image
+        <Image 
           src={images.arrow}
           alt='scroll'
           className={styles['scroll-logo']}
@@ -61,8 +61,8 @@ const Hero = () => {
               'Bootstrap',
               'UIKIT',
               'Adobe XD',
-              'Adobe Illustrator',
-              'Adobe Photoshop'
+              'Illustrator',
+              'Photoshop'
             ].map((item, index) => (
               <li
                 key={item + index}
