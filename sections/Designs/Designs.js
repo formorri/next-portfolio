@@ -27,7 +27,7 @@ const designs = [
     {
         key: 4,
         image: 'design4',
-        title: 'Sime Darby',
+        title: 'UMW Holdings',
         pdf: 'UMW.pdf'
     },
 ]
