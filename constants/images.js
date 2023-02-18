@@ -4,6 +4,7 @@ import design1 from '../public/images/design-1.png';
 import design2 from '../public/images/design-2.png';
 import design3 from '../public/images/design-3.png';
 import design4 from '../public/images/design-4.png';
+import design5 from '../public/images/design-5.png';
 import divider from '../public/images/divider.png';
 import hero1 from '../public/images/hero-1.png';
 import hero2 from '../public/images/hero-2.png';
@@ -18,6 +19,7 @@ const Images = {
     design2,
     design3,
     design4,
+    design5,
     divider,
     hero1,
     hero2,

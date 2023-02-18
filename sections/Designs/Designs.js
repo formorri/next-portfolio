@@ -30,6 +30,12 @@ const designs = [
         title: 'UMW Holdings',
         pdf: 'UMW.pdf'
     },
+    {
+        key: 5,
+        image: 'design5',
+        title: 'FGV Transport',
+        pdf: 'FGV-Transport.pdf'
+    },
 ]
 
 const Designs = () => {
