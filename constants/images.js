@@ -11,6 +11,7 @@ import hero2 from '../public/images/hero-2.png';
 import showcaseWebsite1 from '../public/images/showcase-website-1.png';
 import showcaseWebsite2 from '../public/images/showcase-website-2.png';
 import showcaseWebsite3 from '../public/images/showcase-website-3.png';
+import showcaseWebsite4 from '../public/images/showcase-website-4.png';
 
 const Images = {
     logo,
@@ -26,6 +27,7 @@ const Images = {
     showcaseWebsite1,
     showcaseWebsite2,
     showcaseWebsite3,
+    showcaseWebsite4,
 }
 
 export default Images;

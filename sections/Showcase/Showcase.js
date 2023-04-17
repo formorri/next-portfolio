@@ -7,12 +7,12 @@ import Link from 'next/link';
 const data = [
     {
         key: 1,
-        year: '2023',
-        name: 'BFFGram - All In One App',
-        description: 'BFF Gram aims to be one of the most popular social networking platforms in the globe after launching in the UK. This multi-feature application will be known for its family/friends/advisors’ networking capabilities.',
-        tech: ['Next.js', 'React.js', 'SASS', 'AWS Amplify', 'Material UI'],
-        link: 'https://www.bffgram.com/',
-        image: 'showcaseWebsite1'
+        year: '2022',
+        name: 'KPJ Healthcare',
+        description: 'KPJ Healthcare Berhad. Delivering What Matters to You. Integrated Annual Report 2021 and Sustainability Report 2021.',
+        tech: ['HTML', 'SASS', 'UIKIT', 'JS'],
+        link: 'https://kpj.listedcompany.com/misc/snapsite/ar2021/index.html',
+        image: 'showcaseWebsite3'
     },
     {
         key: 2,
@@ -25,19 +25,30 @@ const data = [
     },
     {
         key: 3,
-        year: '2022',
-        name: 'KPJ Healthcare',
-        description: 'KPJ Healthcare Berhad. Delivering What Matters to You. Integrated Annual Report 2021 and Sustainability Report 2021.',
-        tech: ['HTML', 'SASS', 'UIKIT', 'JS'],
-        link: 'https://kpj.listedcompany.com/misc/snapsite/ar2021/index.html',
-        image: 'showcaseWebsite3'
+        year: '2023',
+        name: 'BFFGram - All In One App',
+        description: 'BFF Gram aims to be one of the most popular social networking platforms in the globe after launching in the UK. This multi-feature application will be known for its family/friends/advisors’ networking capabilities.',
+        tech: ['Next.js', 'React.js', 'SASS', 'AWS Amplify', 'Material UI'],
+        link: 'https://www.bffgram.com/',
+        image: 'showcaseWebsite1'
+    },
+    {
+        key: 4,
+        year: '2023',
+        name: 'UMW Integrated Annual report 2022',
+        description: 'Accelerating CREST @UMW Integrated Annual Report 2022',
+        tech: ['Next.js', 'React.js', 'SASS', 'Material UI'],
+        link: 'https://www.annualreport.umw.com.my/',
+        image: 'showcaseWebsite4'
     },
 ]
+
+const reversedData= data.reverse();
 
 const Showcase = () => {
     return (
         <>
-            {data.map((project) => (
+            {reversedData.map((project) => (
                 <div className={styles.container}>
                     <p className={styles.year}>{project.year}</p>
                     <div key={project.key} className={styles.grid}>
