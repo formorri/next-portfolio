@@ -10,31 +10,36 @@ const designs = [
         key: 1,
         image: 'design1',
         title: 'Grab',
-        pdf: 'Grab.pdf'
+        pdf: 'Grab.pdf',
+        videoLink:'https://youtu.be/P1lZggq4KLo'
     },
     {
         key: 2,
         image: 'design2',
         title: 'Petronas Chemicals',
-        pdf: 'Petronas-Chemical.pdf'
+        pdf: 'Petronas-Chemical.pdf',
+        videoLink:'https://youtu.be/Yb4zOvGBk_o'
     },
     {
         key: 3,
         image: 'design3',
         title: 'Sime Darby',
-        pdf: 'Sime-Darby.pdf'
+        pdf: 'Sime-Darby.pdf',
+        videoLink:'https://youtu.be/EFj-ze39xc8'
     },
     {
         key: 4,
         image: 'design4',
         title: 'UMW Holdings',
-        pdf: 'UMW.pdf'
+        pdf: 'UMW.pdf',
+        videoLink:'https://youtu.be/6PT4_QMifiM'
     },
     {
         key: 5,
         image: 'design5',
         title: 'FGV Transport',
-        pdf: 'FGV-Transport.pdf'
+        pdf: 'FGV-Transport.pdf',
+        videoLink:'https://youtu.be/A6jBPZKnjeI'
     },
 ]
 
@@ -64,6 +69,17 @@ const Designs = () => {
                                             </button>
                                         </div>
                                     </Link>
+                                    <a href={item.videoLink} target='_blank'>
+                                        <div className={styles['button-container']}>
+                                            <button className={styles['design-button']}>
+                                                <div className={styles['inner']}>
+                                                    <div className={styles['button-text']}>
+                                                        Watch the Demo
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div className={styles.name}>{item.title}</div>

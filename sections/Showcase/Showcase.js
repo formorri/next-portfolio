@@ -35,9 +35,9 @@ const data = [
     {
         key: 4,
         year: '2023',
-        name: 'UMW Integrated Annual report 2022',
+        name: 'UMW Integrated Annual Report 2022',
         description: 'Accelerating CREST @UMW Integrated Annual Report 2022',
-        tech: ['Next.js', 'React.js', 'SASS', 'Material UI'],
+        tech: ['Next.js', 'React.js', 'SASS', 'Material UI', 'CPanel'],
         link: 'https://www.annualreport.umw.com.my/',
         image: 'showcaseWebsite4'
     },
